@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Umanit\SyliusProductVariantAttributePlugin
+        psr4_prefix: Umanit\SyliusProductVariantAttributePlugin
