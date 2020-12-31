@@ -1,7 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+services:
+    umanit_sylius_product_variant_attribute_plugin.event.listener.admin_product_variant_menu:
+        class: Umanit\SyliusProductVariantAttributePlugin\Event\Listener\AdminProductVariantMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.product_variant.form, method: addAttributesMenu }
 
-<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-    <services>
-        <!-- Put your services here -->
-    </services>
-</container>
+    umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_type:
+        class: Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeValueType
+        arguments:
+            - 'Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue'
+            - '%sylius.form.type.product_attribute_value.validation_groups%'
+            - 'Sylius\Bundle\ProductBundle\Form\Type\ProductAttributeChoiceType'
+            - '@sylius.repository.product_attribute'
+            - '@sylius.repository.locale'
+            - '@sylius.form_registry.attribute_type'
+        tags:
+            - { name: form.type }
+
+    umanit_sylius_product_variant_attribute_plugin.form.extension.type.product_variant:
+        class: Umanit\SyliusProductVariantAttributePlugin\Form\Extension\ProductVariantTypeExtension
+        tags:
+            - { name: form.type_extension }
+
+    umanit_sylius_product_variant_attribute_plugin.doctrine.event_subscriber.map_product_variant_attributes:
+        class: Umanit\SyliusProductVariantAttributePlugin\Event\Subscriber\MapProductVariantAttributesSubscriber
+        arguments:
+            - '%sylius.model.product_variant.class%'
+        tags:
+            - { name: doctrine.event_subscriber }

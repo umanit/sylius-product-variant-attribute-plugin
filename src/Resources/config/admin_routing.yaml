@@ -1,0 +1,13 @@
+umanit_sylius_product_variant_attribute_plugin_admin_get_product_variant_attributes:
+    path: /variant-attributes
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.product_attribute:renderAttributesAction
+        template: "@UmanitSyliusProductVariantAttributePlugin/Admin/ProductVariant/Attribute/attributeChoice.html.twig"
+
+umanit_sylius_product_variant_attribute_plugin_admin_render_variant_attribute_forms:
+    path: /variant-attribute-forms
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.product_attribute:renderAttributeValueFormsAction
+        template: "@UmanitSyliusProductVariantAttributePlugin/Admin/ProductVariant/Attribute/attributeValues.html.twig"

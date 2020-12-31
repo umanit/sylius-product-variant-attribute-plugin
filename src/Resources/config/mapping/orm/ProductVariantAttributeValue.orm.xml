@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd"
+>
+    <entity name="Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue"
+            table="umanit_sylius_product_variant_attribute_value">
+        <many-to-one field="subject" target-entity="Sylius\Component\Core\Model\ProductVariantInterface"
+                     inversed-by="attributes">
+            <join-column name="product_variant_id" referenced-column-name="id" nullable="false" on-delete="CASCADE" />
+        </many-to-one>
+
+        <many-to-one field="attribute" target-entity="Sylius\Component\Product\Model\ProductAttributeInterface">
+            <join-column name="attribute_id" referenced-column-name="id" nullable="false" on-delete="CASCADE" />
+        </many-to-one>
+    </entity>
+</doctrine-mapping>

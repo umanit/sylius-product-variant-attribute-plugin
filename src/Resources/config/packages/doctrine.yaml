@@ -1,0 +1,9 @@
+doctrine:
+    orm:
+        mappings:
+            UmanitSyliusProductVariantAttributePlugin:
+                is_bundle: true
+                type: xml
+                dir: Resources/config/mapping/orm
+                prefix: Umanit\SyliusProductVariantAttributePlugin\Entity
+                alias: UmanitSyliusProductVariantAttributePlugin
