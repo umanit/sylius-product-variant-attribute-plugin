@@ -1,5 +1,5 @@
 {
-    "name": "umanit/sylius-product-variant-attributes-plugin",
+    "name": "umanit/sylius-product-variant-attribute-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Plugin for Sylius to add attributes on product variants.",
