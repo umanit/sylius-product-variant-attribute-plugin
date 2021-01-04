@@ -36,7 +36,8 @@
     "autoload": {
         "psr-4": {
             "Umanit\\SyliusProductVariantAttributePlugin\\": "src/",
-            "Tests\\Umanit\\SyliusProductVariantAttributePlugin\\": "tests/"
+            "Tests\\Umanit\\SyliusProductVariantAttributePlugin\\": ["tests/", "tests/Application/src"],
+            "Umanit\\SyliusProductVariantAttributePlugin\\spec\\": "spec/"
         }
     },
     "autoload-dev": {
