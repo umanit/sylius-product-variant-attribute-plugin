@@ -9,8 +9,11 @@ parameters:
 services:
     umanit_sylius_product_variant_attribute_plugin.event.listener.admin_product_variant_menu:
         class: Umanit\SyliusProductVariantAttributePlugin\Event\Listener\AdminProductVariantMenuListener
+        arguments:
+            - '@knp_menu.manipulator'
         tags:
-            - { name: kernel.event_listener, event: sylius.menu.admin.product_variant.form, method: addAttributesMenu }
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAttributesMainMenu }
+            - { name: kernel.event_listener, event: sylius.menu.admin.product_variant.form, method: addAttributesFormMenu }
 
     umanit_sylius_product_variant_attribute_plugin.form.type.product_variant_attribute_type:
         class: Umanit\SyliusProductVariantAttributePlugin\Form\Type\ProductVariantAttributeType
