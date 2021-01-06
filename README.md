@@ -86,6 +86,16 @@ php bin/console doctrine:migrations:migrate
 
 ## Usage
 
-Like in product edition, variants now has an `Attributes` tab in which you can add attributes. There is no distinction
-between product and variant attributes list; Existing attributes of your application can be used in the entity of your
-choice.
+Like in product edition, variants now has an `Attributes` tab in which you can add attributes. The operation and
+possibilities are the same as with the existing attributes.
+
+The variant attributes list differ from the existing one used for products. A new entry is added to the `Catalog` menu
+in order to manage this new list.
+
+By default, the existing entry `Attributes` is renamed to `Products attributes`. You can change this behaviour by
+defining the following configuration:
+
+```yaml
+umanit_sylius_product_variant_attribute_plugin:
+    rename_product_attribute_menu_entry: false
+```
