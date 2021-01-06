@@ -11,6 +11,7 @@ services:
         class: Umanit\SyliusProductVariantAttributePlugin\Event\Listener\AdminProductVariantMenuListener
         arguments:
             - '@knp_menu.manipulator'
+            - '%umanit_sylius_product_variant_attribute_plugin.rename_product_attribute_menu_entry%'
         tags:
             - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAttributesMainMenu }
             - { name: kernel.event_listener, event: sylius.menu.admin.product_variant.form, method: addAttributesFormMenu }

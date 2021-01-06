@@ -31,6 +31,10 @@ final class UmanitSyliusProductVariantAttributeExtension extends AbstractResourc
         $loader->load('services.yaml');
 
         $container->setParameter(
+            'umanit_sylius_product_variant_attribute_plugin.rename_product_attribute_menu_entry',
+            $config['rename_product_attribute_menu_entry']
+        );
+        $container->setParameter(
             'umanit_sylius_product_variant_attribute_plugin.product_variant_model',
             $config['product_variant_model']
         );

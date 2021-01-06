@@ -15,7 +15,12 @@ final class Configuration implements ConfigurationInterface
 
         $treeBuilder->getRootNode()
             ->children()
+                ->booleanNode('rename_product_attribute_menu_entry')
+                    ->info('The "Attributes" entry in the "Catalog" menu should be renamed to "Products attributes"')
+                    ->defaultTrue()
+                ->end()
                 ->scalarNode('product_variant_model')
+                    ->info('The FQCN of the product variant model. Defaults to the parameter %sylius.model.product_variant.class%')
                     ->defaultValue('%sylius.model.product_variant.class%')
                     ->cannotBeEmpty()
                 ->end()

@@ -3,6 +3,7 @@ umanit_sylius_product_variant_attribute_plugin:
         admin:
             main:
                 catalog:
+                    product_attributes: 'Products attributes'
                     variant_attributes: 'Variants attributes'
     ui:
         manage_attributes_of_your_products: 'Manage attributes of your variants'
