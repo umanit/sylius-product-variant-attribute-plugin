@@ -4,7 +4,7 @@ imports:
 sylius_grid:
     templates:
         action:
-            create_product_variant_attribute: "@UmanitSyliusProductVariantAttributePlugin/Admin/ProductAttribute/Grid/Action/create.html.twig"
+            create_product_variant_attribute: "@UmanitSyliusProductVariantAttributePlugin/Admin/ProductVariantAttribute/Grid/Action/create.html.twig"
     grids:
         umanit_sylius_product_variant_attribute_plugin_admin_product_variant_attribute:
             driver:

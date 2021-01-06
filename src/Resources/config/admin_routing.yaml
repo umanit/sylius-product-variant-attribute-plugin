@@ -11,7 +11,7 @@ umanit_sylius_product_variant_attribute_plugin_admin_product_variant_attribute:
             all:
                 subheader: umanit_sylius_product_variant_attribute_plugin.ui.manage_attributes_of_your_products
                 templates:
-                    form: "@SyliusAdmin/ProductAttribute/_form.html.twig"
+                    form: "@UmanitSyliusProductVariantAttributePlugin/Admin/ProductVariantAttribute/_form.html.twig"
             index:
                 icon: cubes
     type: sylius.resource
@@ -33,7 +33,7 @@ umanit_sylius_product_variant_attribute_plugin_admin_product_variant_attribute_c
             vars:
                 subheader: umanit_sylius_product_variant_attribute_plugin.ui.manage_attributes_of_your_products
                 templates:
-                    form: "@SyliusAdmin/ProductAttribute/_form.html.twig"
+                    form: "@UmanitSyliusProductVariantAttributePlugin/Admin/ProductVariantAttribute/_form.html.twig"
                 route:
                     name: umanit_sylius_product_variant_attribute_plugin_admin_product_variant_attribute_create
                     parameters:
@@ -44,7 +44,7 @@ umanit_sylius_product_variant_attribute_plugin_admin_get_attribute_types:
     methods: [GET]
     defaults:
         _controller: sylius.controller.product_variant_attribute:getAttributeTypesAction
-        template: "@UmanitSyliusProductVariantAttributePlugin/Admin/ProductAttribute/Types/attributeTypes.html.twig"
+        template: "@UmanitSyliusProductVariantAttributePlugin/Admin/ProductVariantAttribute/Types/attributeTypes.html.twig"
 
 umanit_sylius_product_variant_attribute_plugin_admin_get_product_variant_attributes:
     path: /variant-attributes
