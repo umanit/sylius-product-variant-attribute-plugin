@@ -1,0 +1,13 @@
+umanit_sylius_product_variant_attribute_plugin:
+    menu:
+        admin:
+            main:
+                catalog:
+                    variant_attributes: 'Variants attributes'
+    ui:
+        manage_attributes_of_your_products: 'Manage attributes of your variants'
+sylius:
+    ui:
+        product_variant_attributes: 'Variant attributes'
+        new_product_variant_attribute: 'New variant attribute'
+        edit_product_variant_attribute: 'Edit variant attribute'
