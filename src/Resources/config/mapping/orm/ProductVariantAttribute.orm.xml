@@ -5,7 +5,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd"
 >
-    <mapped-superclass name="Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttributeValue"
-                       table="umanit_sylius_product_variant_attribute_value">
+    <mapped-superclass name="Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantAttribute"
+                       table="umanit_sylius_product_variant_attribute">
     </mapped-superclass>
 </doctrine-mapping>

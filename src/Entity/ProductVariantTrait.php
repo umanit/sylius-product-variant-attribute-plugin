@@ -16,8 +16,6 @@ trait ProductVariantTrait
 
     public function __construct()
     {
-        parent::__construct();
-
         $this->attributes = new ArrayCollection();
     }
 

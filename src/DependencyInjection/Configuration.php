@@ -12,7 +12,15 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('umanit_sylius_product_variant_attribute_plugin');
-        $rootNode = $treeBuilder->getRootNode();
+
+        $treeBuilder->getRootNode()
+            ->children()
+                ->scalarNode('product_variant_model')
+                    ->defaultValue('%sylius.model.product_variant.class%')
+                    ->cannotBeEmpty()
+                ->end()
+            ->end()
+        ;
 
         return $treeBuilder;
     }
