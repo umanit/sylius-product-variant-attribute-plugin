@@ -46,7 +46,7 @@ final class ProductVariantTypeExtension extends AbstractTypeExtension
 
     }
 
-    public function getExtendedTypes(): array
+    public static function getExtendedTypes(): array
     {
         return [ProductVariantType::class];
     }

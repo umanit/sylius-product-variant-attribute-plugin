@@ -17,7 +17,16 @@ use Umanit\SyliusProductVariantAttributePlugin\Entity\ProductVariantTrait;
  */
 class ProductVariant extends BaseProductVariant implements ProductVariantInterface
 {
-    use ProductVariantTrait;
+    use ProductVariantTrait {
+        __construct as attributesConstruct;
+    }
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->attributesConstruct();
+    }
 
     protected function createTranslation(): ProductVariantTranslationInterface
     {
