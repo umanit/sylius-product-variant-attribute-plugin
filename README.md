@@ -12,6 +12,10 @@ Add attributes on your products variants.
 
 ## Install
 
+Install the plugin with composer
+
+`$ composer require umanit/sylius-product-variant-attribute-plugin`
+
 Register the plugin to your `config/bundles.php`
 
 ```php
@@ -34,7 +38,7 @@ Import the routing file, for example in `config/routes/sylius_admin.yaml`
 
 ```yaml
 umanit_sylius_product_variant_attribute_plugin:
-    resource: "@UmanitSyliusProductVariantAttributePlugin/Resources/config/admin_routing.yaml"
+    resource: '@UmanitSyliusProductVariantAttributePlugin/Resources/config/admin_routing.yaml'
     prefix: /admin
 ```
 
