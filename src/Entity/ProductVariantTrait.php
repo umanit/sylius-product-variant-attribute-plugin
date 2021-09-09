@@ -65,8 +65,8 @@ trait ProductVariantTrait
 
         foreach ($this->attributes as $attribute) {
             if (
-                $localeCode === $attribute->getLocaleCode() &&
-                $attributeCode === $attribute->getAttribute()->getCode()
+                $attributeCode === $attribute->getAttribute()->getCode() &&
+                ($localeCode === $attribute->getLocaleCode() || null === $attribute->getLocaleCode())
             ) {
                 return true;
             }
@@ -83,9 +83,8 @@ trait ProductVariantTrait
 
         foreach ($this->attributes as $attribute) {
             if (
-                $localeCode === $attribute->getLocaleCode() &&
-                $attributeCode === $attribute->getAttribute()->getCode()
-            ) {
+                $attributeCode === $attribute->getAttribute()->getCode() &&
+                ($localeCode === $attribute->getLocaleCode() || null === $attribute->getLocaleCode())) {
                 return $attribute;
             }
         }
@@ -105,7 +104,7 @@ trait ProductVariantTrait
 
         $attributes = $this->attributes->filter(
             function (ProductVariantAttributeValueInterface $attribute) use ($baseLocaleCode) {
-                return $baseLocaleCode === $attribute->getLocaleCode();
+                return $baseLocaleCode === $attribute->getLocaleCode() || null === $attribute->getLocaleCode();
             }
         );
 
